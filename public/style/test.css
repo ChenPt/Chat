@@ -1,0 +1,543 @@
+/*页面的样式   test.css*/
+
+* { 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: '微软雅黑'
+}
+html {
+	font-size: 17px;
+}
+
+body { 
+	font: 13px Helvetica, Arial; 
+}
+
+.container {
+	position: relative;
+}
+
+.logo {
+	margin-right: 20px;
+	width: 60px;
+	height: 60px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	background: #ddd;
+}
+.msg-form { 
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	background: #fff;
+	border: 1px solid rgba(200,200,200,.5); 
+	padding: 3px; 
+	bottom: 0; 
+}
+.msg-input { 
+	border: 0; 
+	padding: 10px; 
+	resize: none;
+	font-size: 1rem;
+	font-family: '微软雅黑';
+	height: 192px;
+}
+
+.send-button { 
+	position: absolute;
+	width: 15%; 
+	margin: 6px 0;
+	padding: 10px; 
+	bottom: 5px;
+	right: 10px;
+	background: rgba(220, 220, 220, .3); 
+	border: 1.5px solid rgba(140, 140, 140, .3); 
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.send-button p {
+	font-size: 10px;
+}
+
+#messages { 
+	height: 450px;	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;	
+	background: rgba(230,230,230,.3);
+}
+
+#messages li { 
+	padding: 5px 10px; 
+	font-size: 1rem;
+}
+
+#messages::-webkit-scrollbar {
+	widows: 1px;
+}
+
+h1 {
+    display: inline-block;
+	color: #000;
+}
+
+.info {
+	font-size: 18px;
+	color: #111;
+	margin-bottom: 10px;
+}
+
+.login-button {
+	width: 100%; 
+	margin: 6px 0;
+	background: rgba(220, 220, 220, .3); 
+	border: 1.5px solid rgba(140, 140, 140, .3); 
+	padding: 10px; 
+	cursor: pointer;
+}
+.login-button:hover,.send-button:hover {
+	background-color: rgba(150,150,150,.4);
+}
+
+.login-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	text-align: center;
+	color: #fff;
+}
+
+.nick-wrap {
+	display: none;
+}
+
+.container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.text-online {
+	display: flex;
+	width: 100%;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+    border-bottom: 2px solid #ffffff;
+	color: #fff;
+	font-weight: bold;
+}
+
+div[name="room1wrap"] {
+	display: block;
+}
+
+.room-list-wrap {
+	width: 10%;
+	height: 680px;
+	float: left;
+	background-color: #EEE;
+}
+
+.room-list {
+    background: #ddd;
+	list-style-type: none;
+}
+
+.room-list>li {
+	display: flex;
+	height: 20px;
+	justify-content: center;
+	align-items: center;
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.room-list>li:hover {
+	background-color: #aaa;
+}
+
+.selected {
+	background-color: #aaa!important; 
+}
+
+.my-name {
+	font-size: 20px;
+	color: snow;
+}
+
+.your-avatar-wrap {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	background-color: #fff;
+}
+
+.your-avatar {
+	max-width: 100%;
+}
+
+.user-list-wrap {
+	width: 10%;
+	height: 680px;
+	background: #aaa;
+	overflow-y: scroll;
+	float: left;
+}
+.user-list-wrap::-webkit-scrollbar {
+	width: 1px;
+}
+
+.user-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.user-list li {
+	display: flex;
+	position: relative;
+	width: 100%;
+	margin: 5px 5px;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: 1px solid #ddd;
+}
+.user-list li p {
+	color: #fff;
+	word-break: break-all;
+	text-align: center;
+}
+
+.onlines-avatar-wrap {
+	display: inline-flex;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	background-color: rgba(255,255,255,1);
+}
+
+.room-user-wrap p {
+	color:#000;
+	font-weight: 100;
+	font-size: 16px;
+}
+
+.room-list>li {
+	color: #000;
+	font-size: 17px;
+	font-weight: 100;
+}
+.onlines-avatar {
+	width: 50px;
+}
+
+.online-title {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 20px;
+	color: #f00;
+}
+
+.active-style {
+	background-color: red!important;
+}
+
+.send-tips {
+	position: absolute;
+	display: none;
+	opacity: 0;
+	bottom: 64px;
+	right: -190px;
+	background-color: #fff;
+	color: #000;
+	padding: 17px;
+	border: 1px solid #555;
+	border-radius: 7px;
+}
+
+.send-tips:after {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-color: #fff transparent transparent transparent ;
+	border-style: solid;
+	border-width: 7px;
+	position: absolute;
+	bottom: -13px;
+	border-radius: 3px;
+	right: 20px;
+}
+
+.send-tips:before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-color: #000 transparent transparent transparent;
+	border-style: solid;
+	border-width: 7px;
+	position: absolute;
+	bottom: -14px;
+	border-radius: 3px;
+	right: 20px;
+}
+
+.myself-msg {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.others-msg {
+	display: flex;
+	align-items: center;
+}
+
+.userinfo-wrap {
+	display: flex;
+	flex-direction: inherit;
+	align-items: center;
+	text-align: center;
+}
+
+.send-time{
+	margin: 0 5px;
+}
+
+.myself-msg .text-msg,.others-msg .text-msg {
+	display: inline-block;
+	padding: 12px;
+	background: #fff;
+	border-radius: 10px;
+}
+
+.others-msg .text-msg {
+	background: #fff;
+}
+
+.myself-msg .text-msg {
+	background: rgba(58, 237, 98, 0.75);
+}
+
+.system-msg {
+	color: red;
+	font-size: 14px;
+	text-align: center;
+}
+
+.send-time {
+	font-size: 14px;
+	color: rgba(100,100,100,.5);
+}
+
+.occur-time {
+	color: rgba(255,0,0,.7);
+	padding-left: 3px;
+	font-size: 12px;
+}
+
+.img-msg {
+	max-width: 300px;
+}
+
+#imgSelect {
+	display: none;
+}
+
+.img-select-icon {
+	display: block;
+	margin: 0 20px 0 5px;
+	width: 30px;
+	height: 30px;
+	background-image: url(/img/icons/image.svg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	background-size: cover;
+}
+
+.menu-bar {
+	display: flex;
+}
+
+#fileSelect {
+	display: none;
+}
+
+.file-select-icon {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-image: url(/img/icons/file.svg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	background-size: cover;
+}
+
+.user-avatar {
+	width: 80px;
+}
+
+img[alt="userAva"] {
+	width: 80px;
+}
+
+.user-select-ava {
+	width: 50px;
+}
+
+
+.ava-preview-contaniner {
+	display: inline-flex;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	background-color: rgba(255,255,255,1);
+}
+
+.ava-select-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ava-select-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(/img/icons/image.svg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	background-size: cover;
+}
+
+#avaSelect {
+	display: none;
+}
+
+.file-download {
+	color: #000;
+	text-decoration: none;
+}
+
+.file-msg-icon {
+	width: 50px;
+}
+
+.text-wrap {
+	flex: 1;
+}
+
+.fiie-msg-wrap {
+	display: flex;
+	padding: 6px 5px 5px 10px;
+	min-width: 180px;
+	max-width: 200px;
+	min-height: 80px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.fiie-msg-wrap:hover {
+	color: #238df1;
+	background-color: #ddd;
+}
+
+.file-size {
+	margin: 18px 0px 2px 2px;
+	font-size: 12px;
+	color: #aaa;
+}
+
+.filename {
+	word-break: break-all;
+	font-size: 15px;
+}
+
+/*动画*/
+@keyframes slideInDown {
+	from {
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInDown {
+	animation-name: slideInDown;
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+/*--end--*/
+.room-user-wrap {
+	display: none;
+	text-align: center;
+	overflow: auto;
+	max-height: 600px;
+}
+
+.room-user-wrap::-webkit-scrollbar {
+	width: 1px;
+}
+
+.room-user-wrap li {
+	padding: 5px 0;
+	border-bottom: 2px solid #aaa;
+}
+
+.ava-container {
+	display: flex;
+	width: 80px;
+	height: 80px;
+	align-items: center;
+	overflow: hidden;
+	background-color: rgba(255,255,255,1);
+}
+
+.my-name {
+	position: absolute;
+	opacity: 0;
+	line-height: 40px;
+    font-size: 15px;
+	top: 0; 
+	left: 0; 
+	text-align: center;
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(0,0,0,.5);
+	color: white; 
+	border-radius: 4px;
+	opacity: 0; 
+	transition: all .3s; 
+}
+
+
+.my-name:hover {
+	opacity: 1; 
+}

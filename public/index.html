@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CPT Chat</title>
+	<link rel="stylesheet" href="style/test.css">
+	<link rel="shortcut icon" href="img/icons/nw.ico">
+	<script src="scripts/socket.io-1.4.5.js"></script>
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/client.js"></script>
+</head>
+<body>
+	<!-- 聊天室HTML文件 -->
+	<div class="container">
+		<header>
+			<img src="img/icons/nw.ico" alt="" class="logo">
+			<h1>CPT聊天室</h1>
+		</header>
+		<div class="user-list-wrap">
+			<ul class="user-list">
+				<li>
+					<div class="your-avatar-wrap">
+						<img src="img/0cff8594a4c27d1e5b1861721ad5ad6edcc4388e.jpg" alt="" class="your-avatar">
+					</div>
+					<p class="my-name"></p>
+				</li>
+				<p class="text-online">其他在线成员</p>
+			</ul>
+		</div>
+		<div class="room-list-wrap">
+			<ul class="room-list">
+				<li name="room1" class="selected">room1</li>
+				<div name="room1wrap" class="room-user-wrap"></div>
+				<li name="room2">room2</li>
+				<div name="room2wrap" class="room-user-wrap"></div>
+				<li name="room3">room3</li>
+				<div name="room3wrap" class="room-user-wrap"></div>
+				<li name="room4">room4</li>
+				<div name="room4wrap" class="room-user-wrap"></div>
+			</ul>
+		</div>
+
+		<div class="right-wrap">
+			<ul id="messages">	
+			</ul>
+			<div class="menu-bar">
+				<label for="imgSelect" class="img-select-icon" title="选择图片"></label>
+				<input type="file" id="imgSelect">
+				<label for="fileSelect" class="file-select-icon" title="选择文件"></label>
+				<input type="file" id="fileSelect">
+			</div>
+			<form action="" class="msg-form">
+				<textarea class="msg-input" autocomplete="off" style="width: 100%;" type = 'file'></textarea> 
+				<button type='submit' class="send-button">发送<p>(CTRL+ENTER)</p></button>
+			</form>
+		</div>
+		<div class="send-tips">不能发送空白信息</div>
+	</div>
+	<div class="login-wrap">
+		<p class="info">connecting to server...</p>
+		<div class="nick-wrap">
+			<form action="">
+				<input type="text" placeholder="请输入您的用户名" class="name-input" autofocus='true'>
+				<div class="ava-select-wrap">
+					<label for="avaSelect" class="ava-select-icon" title="选择图片作为头像"></label>
+					<input type="file" id="avaSelect">
+					<div class="ava-preview-contaniner">
+						<img src="img/icons/1498565089.jpg" alt="" class="user-select-ava">
+					</div>
+				</div>
+				<button class="login-button">提交</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
